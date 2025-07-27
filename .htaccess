@@ -1,0 +1,12 @@
+# Impede listagem de diretórios
+Options -Indexes
+
+# Protege arquivos sensíveis por extensão
+<FilesMatch "\.(ini|log|sql|sh|db\.php|config\.php)$">
+    Require all denied
+</FilesMatch>
+
+# Protege o próprio .htaccess
+<Files ".htaccess">
+    Require all denied
+</Files>
